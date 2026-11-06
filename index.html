@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Merle Bleu Salon – Premium Unisex Salon in Nagpur</title>
+<meta name="description" content="Haircut, styling, coloring, hair spa, facials, skincare and bridal services for men and women at Merle Bleu Salon, Manewada Rd, Nagpur.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f8ff;--surface:#ffffff;--text:#10223f;--muted:#586a88;
+  --navy:#0f2a5c;--blue:#2f6fd6;--gold:#b8955a;--soft:#e3eeff;--line:#d5e2f7;
+  --h1:#0b1f4a;--h2:#2f6fd6;--on-hero:#f2f7ff;
+  color-scheme:light;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#08142d;--surface:#0f2147;--text:#eaf1ff;--muted:#a9bbdb;
+    --navy:#9cc0ff;--blue:#7fb0ff;--gold:#d9b878;--soft:#14295a;--line:#22407a;
+    --h1:#050d20;--h2:#1b3f8f;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#08142d;--surface:#0f2147;--text:#eaf1ff;--muted:#a9bbdb;
+  --navy:#9cc0ff;--blue:#7fb0ff;--gold:#d9b878;--soft:#14295a;--line:#22407a;
+  --h1:#050d20;--h2:#1b3f8f;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;line-height:1.15;margin:0 0 .5em}
+a{color:inherit}
+.wrap{max-width:1050px;margin:0 auto;padding:0 20px}
+section{padding:60px 0}
+.center{text-align:center}
+.eyebrow{color:var(--gold);letter-spacing:.22em;text-transform:uppercase;font-size:.74rem;font-weight:600}
+h2{font-size:clamp(2rem,5vw,2.8rem);color:var(--navy)}
+h2::after{content:"";display:block;width:80px;height:10px;margin:12px 0 0;background:radial-gradient(circle,var(--gold) 0 3.5px,transparent 4.5px) center/10px 10px no-repeat,linear-gradient(var(--gold),var(--gold)) left center/30px 2px no-repeat,linear-gradient(var(--gold),var(--gold)) right center/30px 2px no-repeat}
+.center h2::after{margin:12px auto 0}
+.lead{color:var(--muted);max-width:600px;margin:0 auto 34px}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:1.35rem;color:var(--navy);text-decoration:none}
+.logo span{color:var(--gold)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.9rem}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--blue)}
+@media(max-width:640px){nav ul{display:none}}
+
+.hero{background:linear-gradient(135deg,var(--h1),var(--h2),var(--h1));background-size:220% 220%;animation:gshift 12s ease infinite;color:var(--on-hero);text-align:center;padding:70px 0 120px;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.hero .eyebrow{color:#e6cf9f}
+.hero h1{font-size:clamp(2.6rem,8vw,4.6rem);margin:.15em 0}
+.hero h1 em{color:#e6cf9f;font-style:italic}
+.tag{font-style:italic;font-size:1.05rem;max-width:560px;margin:0 auto 26px;opacity:.95}
+.emblem{width:170px;height:auto;display:block;margin:0 auto 6px;animation:float 4.5s ease-in-out infinite;filter:drop-shadow(0 8px 18px rgba(0,0,0,.35))}
+.ring{transform-box:fill-box;transform-origin:center;animation:spin 26s linear infinite}
+.sparks{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.sparks span{position:absolute;bottom:-20px;left:var(--l);width:var(--s);height:var(--s);background:#dfeaff;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);opacity:0;animation:sp 8s linear infinite;animation-delay:var(--d)}
+.wave{position:absolute;left:0;bottom:-1px;width:100%;height:50px;display:block}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{position:relative;overflow:hidden;display:inline-block;padding:13px 26px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.95rem;border:2px solid #e6cf9f}
+.btn.gold{background:#e6cf9f;color:#0b1f4a}
+.btn.gold::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.7),transparent);transform:skewX(-20deg);animation:shine 3.2s infinite}
+.btn.ghost{color:var(--on-hero)}
+.btn.blue{background:var(--blue);border-color:var(--blue);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.blue{color:#08142d}}
+
+.tick{background:var(--h1);color:#e6cf9f;overflow:hidden;white-space:nowrap;padding:11px 0;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase}
+.tick div{display:inline-block;animation:mq 26s linear infinite}
+.tick span{padding:0 18px}
+
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;text-align:left;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--gold))}
+.card:hover{transform:translateY(-5px);box-shadow:0 12px 26px rgba(47,111,214,.18)}
+.card .ic{width:54px;height:54px;border-radius:50%;background:var(--soft);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:10px}
+.card h3{font-size:1.4rem;color:var(--navy)}
+.card p{margin:0;color:var(--muted);font-size:.92rem}
+.contact .card{text-align:center}
+.contact .card .ic{margin-left:auto;margin-right:auto}
+.contact a.line{display:block;font-weight:600;color:var(--blue);text-decoration:none;margin-top:6px}
+
+.why{background:var(--soft)}
+.about{display:grid;gap:30px;grid-template-columns:1fr;align-items:center}
+@media(min-width:760px){.about{grid-template-columns:1.2fr 1fr}}
+.about ul{list-style:none;padding:0;margin:18px 0 0}
+.about li{padding:6px 0 6px 28px;position:relative}
+.about li::before{content:"✦";position:absolute;left:0;color:var(--gold)}
+.badge{background:linear-gradient(135deg,var(--h1),var(--h2));color:#f2f7ff;border-radius:24px;padding:40px 26px;text-align:center;position:relative;overflow:hidden}
+.badge b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-size:3.4rem;color:#e6cf9f}
+.badge::before,.badge::after{content:"✦";position:absolute;color:#e6cf9f;opacity:.45}
+.badge::before{top:12px;left:16px;font-size:1.6rem}.badge::after{bottom:10px;right:16px;font-size:2.2rem}
+
+footer{background:var(--h1);color:#eaf1ff;text-align:center;padding:30px 20px 90px;font-size:.85rem}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#25d366;color:#fff;text-decoration:none;font-weight:600;padding:13px 20px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:30;font-size:.92rem;animation:pulse 2s infinite}
+
+.rv{opacity:0;transform:translateY(30px)}
+.rv.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease,box-shadow .25s}
+.card.rv.in:hover{transform:translateY(-5px)}
+@keyframes gshift{50%{background-position:100% 100%}}
+@keyframes float{50%{transform:translateY(-8px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes sp{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-520px) rotate(200deg);opacity:0}}
+@keyframes shine{0%{left:-60%}60%,100%{left:130%}}
+@keyframes mq{to{transform:translateX(-50%)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%,100%{box-shadow:0 0 0 18px rgba(37,211,102,0)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="logo" href="#top">Merle <span>Bleu</span></a>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="sparks" aria-hidden="true"><span style="--l:7%;--d:0s;--s:12px"></span><span style="--l:19%;--d:2.4s;--s:18px"></span><span style="--l:31%;--d:4.6s;--s:10px"></span><span style="--l:44%;--d:1.2s;--s:16px"></span><span style="--l:56%;--d:5.8s;--s:12px"></span><span style="--l:68%;--d:3.4s;--s:20px"></span><span style="--l:80%;--d:0.7s;--s:11px"></span><span style="--l:92%;--d:4.2s;--s:15px"></span></div>
+  <div class="wrap">
+    <svg class="emblem" viewBox="0 0 200 200" role="img" aria-label="Scissors and comb emblem"><circle class="ring" cx="100" cy="100" r="86" fill="none" stroke="#e6cf9f" stroke-width="2" stroke-dasharray="3 8"/><circle cx="100" cy="100" r="70" fill="rgba(255,255,255,.08)" stroke="#e6cf9f" stroke-width="2"/><g stroke="#f2f7ff" stroke-width="6" fill="none" stroke-linecap="round"><circle cx="76" cy="138" r="13"/><circle cx="124" cy="138" r="13"/><path d="M84 127 L122 58 M116 127 L78 58"/></g><rect x="62" y="40" width="76" height="12" rx="4" fill="#e6cf9f"/><g stroke="#0b1f4a" stroke-width="2"><path d="M70 40v12M78 40v12M86 40v12M94 40v12M102 40v12M110 40v12M118 40v12M126 40v12"/></g><g fill="#e6cf9f"><path d="M30 40 Q30 48 38 48 Q30 48 30 56 Q30 48 22 48 Q30 48 30 40Z"/><path d="M172 150 Q172 158 180 158 Q172 158 172 166 Q172 158 164 158 Q172 158 172 150Z"/></g></svg>
+    <div class="eyebrow">Premium Beauty &amp; Grooming · Nagpur</div>
+    <h1>Merle <em>Bleu</em> Salon</h1>
+    <p class="tag">Sapno ko de udaan, Merle Bleu ke saath nikhare pehchaan</p>
+    <div class="btns">
+      <a class="btn gold" href="https://wa.me/918956352247?text=Hi%2C%20I%20want%20to%20book%20an%20appointment%20at%20Merle%20Bleu%20Salon" target="_blank" rel="noopener">Book on WhatsApp</a>
+      <a class="btn ghost" href="#services">Our Services</a>
+    </div>
+  </div>
+  <svg class="wave" viewBox="0 0 1200 50" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 L0 25 Q150 0 300 25 T600 25 T900 25 T1200 25 L1200 50Z" fill="var(--bg)"/></svg>
+</header>
+
+<div class="tick" aria-hidden="true"><div><span>✦ Haircut</span><span>✦ Hair Styling</span><span>✦ Hair Coloring</span><span>✦ Hair Spa</span><span>✦ Facials</span><span>✦ Skincare</span><span>✦ Bridal</span><span>✦ Haircut</span><span>✦ Hair Styling</span><span>✦ Hair Coloring</span><span>✦ Hair Spa</span><span>✦ Facials</span><span>✦ Skincare</span><span>✦ Bridal</span></div></div>
+
+<section id="services"><div class="wrap center">
+  <div class="eyebrow">What we offer</div>
+  <h2>Services for Men &amp; Women</h2>
+  <p class="lead">Professional care from head to toe, delivered in a calm and welcoming space.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">✂️</div><h3>Professional Haircut</h3><p>Precision cuts that suit your face, style and personality.</p></div>
+    <div class="card"><div class="ic">💇</div><h3>Hair Styling</h3><p>From everyday looks to party-ready styles.</p></div>
+    <div class="card"><div class="ic">🎨</div><h3>Hair Coloring</h3><p>Rich, even color with careful, hair-friendly application.</p></div>
+    <div class="card"><div class="ic">🌿</div><h3>Hair Spa</h3><p>Deep nourishment that restores shine and softness.</p></div>
+    <div class="card"><div class="ic">✨</div><h3>Facials</h3><p>Refreshing facials for a clean, glowing complexion.</p></div>
+    <div class="card"><div class="ic">🧴</div><h3>Skincare</h3><p>Treatments and advice for healthy, radiant skin.</p></div>
+    <div class="card"><div class="ic">👰</div><h3>Bridal Services</h3><p>Complete bridal and groom grooming for your big day.</p></div>
+  </div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap">
+  <div class="about">
+    <div>
+      <div class="eyebrow">Why Merle Bleu</div>
+      <h2>Relax. Refresh. Be Seen.</h2>
+      <p style="color:var(--muted)">Merle Bleu Salon is a premium unisex salon on Manewada Road, Nagpur. We combine skilled stylists, a soothing ambience and strict hygiene so every visit feels as good as the result.</p>
+      <ul>
+        <li>Relaxing, comfortable ambience</li>
+        <li>Hygienic practices at every step</li>
+        <li>Complete grooming for men and women</li>
+        <li>Bridal packages for the big day</li>
+      </ul>
+    </div>
+    <div class="badge"><b>2020</b>Serving Nagpur with style since</div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap center">
+  <div class="eyebrow">Visit us</div>
+  <h2>Book your appointment</h2>
+  <p class="lead">Call or message us, or walk in between 10 AM and 9 PM.</p>
+  <div class="grid">
+    <div class="card"><div class="ic">📞</div><h3>Call</h3><a class="line" href="tel:+918956352247">089563 52247</a></div>
+    <div class="card"><div class="ic">💬</div><h3>WhatsApp</h3><a class="line" href="https://wa.me/918956352247" target="_blank" rel="noopener">Chat with us</a></div>
+    <div class="card"><div class="ic">🕙</div><h3>Hours</h3><p>Every day<br>10:00 AM – 9:00 PM</p></div>
+    <div class="card"><div class="ic">📍</div><h3>Address</h3><p>First Floor, Saraswati Niwas, Plot No 5, Dr. Khankhoje Nagar, Tukdoji, Manewada Rd, Nagpur, Maharashtra 440024</p><a class="line" href="https://maps.app.goo.gl/Gx4Qrp1wQ3k2mKw9A" target="_blank" rel="noopener">View on Google Maps</a></div>
+  </div>
+</div></section>
+
+<footer>
+  <div>© 2026 Merle Bleu Salon · Manewada Rd, Nagpur</div>
+  <div style="margin-top:6px">Premium beauty &amp; grooming for men and women</div>
+</footer>
+
+<a class="wa" href="https://wa.me/918956352247" target="_blank" rel="noopener">💬 WhatsApp</a>
+
+<script>
+(function(){
+if(!('IntersectionObserver' in window))return;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.card,.badge,section h2,.lead').forEach(function(el){el.classList.add('rv');io.observe(el)});
+})();
+</script>
+</body>
+</html>
